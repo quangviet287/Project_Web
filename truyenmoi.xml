@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRUYENMOI>
+    <Truyen>
+        <name>Truyen1</name>
+        <author>Tran A</author>
+        <view>14546</view>
+    </Truyen>
+    <Truyen>
+        <name>Truyen2</name>
+        <author>Tran A</author>
+        <view>14546</view>
+    </Truyen>
+    <Truyen>
+        <name>Truyen3</name>
+        <author>Tran A</author>
+        <view>14546</view>
+    </Truyen>
+    <Truyen>
+        <name>Truyen4</name>
+        <author>Tran A</author>
+        <view>14546</view>
+    </Truyen>
+    <Truyen>
+        <name>Truyen5</name>
+        <author>Tran A</author>
+        <view>14546</view>
+    </Truyen>
+</TRUYENMOI>

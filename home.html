@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Chủ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.7-dist/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster" rel="stylesheet">
+    <script src="home.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/wow.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/turn.min.js"></script>
+</head>
+<body>
+<!--container-->
+<div class="container">
+    <!--header-->
+    <div class="row" style="height: 70px">
+        <div class="col-md-4">
+            <h1><span class="glyphicon glyphicon-book"></span>Kho Truyện</h1>
+        </div>
+        <div class="col-md-6" style="padding: 5px">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nhập vào tên sách...." style="width: 400px">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>Tìm Kiếm
+                </button>
+            </form>
+        </div>
+        <div class="col-md-2">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false" style="color: black"> <span class="glyphicon glyphicon-user"></span>Tài
+                            Khoản<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-target="#myModal1" data-toggle="modal"><span
+                                    class="glyphicon glyphicon-log-in"></span> Đăng Nhập</a></li>
+                            <li><a href="#" data-target="#myModal2" data-toggle="modal"><span
+                                    class="glyphicon glyphicon-edit"></span> Đăng Ký</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="text-align: center">
+                                <b>ĐĂNG NHẬP</b>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail3">Email: </label>
+                                        <input type="email" class="form-control" id="exampleInputEmail"
+                                               placeholder="Nhập vào Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword3">Mật Khẩu: </label>
+                                        <input type="password" class="form-control" id="exampleInputPassword3"
+                                               placeholder="Nhập Vào Mật Khẩu">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Nhớ đến tôi !!!!
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Thoát</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="text-align: center">
+                                <b>ĐĂNG KÝ</b>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputName2">Họ: </label>
+                                        <input type="email" class="form-control" id="exampleInputName1"
+                                               placeholder="Nhập vào Họ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputName2">Tên: </label>
+                                        <input type="email" class="form-control" id="exampleInputName2"
+                                               placeholder="Nhập vào Tên">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail3">Email: </label>
+                                        <input type="email" class="form-control" id="exampleInputEmail3"
+                                               placeholder="Nhập vào Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword3">Mật Khẩu: </label>
+                                        <input type="password" class="form-control" id="Password"
+                                               placeholder="Nhập vào mật khẩu">
+                                        <button type="button" class="btn btn-default" onclick="TestPass()">Kiểm tra mật
+                                            khẩu
+                                        </button>
+                                        <p id="messageerror"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword3">Nhập lại mật khẩu: </label>
+                                        <input type="password" class="form-control" id="ConfirmPassword"
+                                               placeholder="Nhập lại mật khẩu">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Thoát</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/header-->
+    <div class="row"></div>
+    <!--nav menu-->
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Trang Chủ <span
+                    class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">Thể Loại <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" >Ngôn tình</a></li>
+                    <li><a href="#" >Trinh Thám</a></li>
+                    <li><a href="#" >Kiếm Hiệp</a></li>
+                    <li><a href="#">Xuyên Không</a></li>
+                    <li><a href="#">Viễn Tưởng</a></li>
+                    <li><a href="#">Truyện Ma</a></li>
+                    <li><a href="#">Trinh Thám</a></li>
+                    <li><a href="#">Truyện Cười</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Truyện Tranh</a></li>
+            <li><a href="#">Tiểu Thuyết</a></li>
+        </ul>
+    </nav>
+    <!--/menu-->
+    <!--main1-->
+    <div class="row" style="height: 500px;padding: 15px;background-color: white;border: 15px solid #dfdfdf">
+        <div class="col-md-4" style="height: 500px;">
+            <div class="row" style="height: 30px;position: relative;left: 10px">
+                <span><b>TRUYỆN HOT</b><span class="glyphicon glyphicon-menu-right"></span></span>
+            </div>
+            <div class="panel panel-primary">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row toggle" class="active" id="dropdown-detail-1" data-toggle="detail-1">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Tiểu Thuyết
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Truyện Tranh
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Truyện Cười
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Trinh Thám
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Truyện Ma
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-6" data-toggle="detail-6">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Quân Sự
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-7" data-toggle="detail-7">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Lịch Sử
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-8" data-toggle="detail-8">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Xuyên Không
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-9" data-toggle="detail-9">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Võng Du
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown-detail-10" data-toggle="detail-10">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-bookmark"></span>Dị Giới
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-menu-right"></span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8" style="height: 500px;">
+            <div class="row" style="height: 30px"></div>
+            <div id="detail-1" class="carousel slide" class="active" data-ride="carousel"
+                 style="height: 400px;width: 730px">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#detail-1" data-slide-to="0" class="active"></li>
+                    <li data-target="#detail-1" data-slide-to="1"></li>
+                    <li data-target="#detail-1" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/T1png.png" alt="Truyen1" style="height: 400px;width:730px;">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/T2.png" alt="Truyen2" style="height: 400px;width:730px">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/T3.png" alt="Truyen3" style="height: 400px;width:730px">
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#detail-1" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#detail-1" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div id="detail-2" class="carousel slide" data-ride="carousel" style="height: 400px;width: 730px">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#detail-2" data-slide-to="0" class="active"></li>
+                    <li data-target="#detail-2" data-slide-to="1"></li>
+                    <li data-target="#detail-2" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/T4.png" alt="Truyen1" style="height: 400px;width:730px;">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/T5.png" alt="Truyen2" style="height: 400px;width:730px">
+                    </div>
+
+                    <div class="item">
+                        <img src="img/T6.png" alt="Truyen3" style="height: 400px;width:730px">
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#detail-2" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#detail-2" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--/main1-->
+    <!--main2-->
+    <div class="row"
+         style="height: 480px;background-color: white;border-left: 15px solid #dfdfdf;border-right: 15px solid #dfdfdf;border-bottom: 15px solid #dfdfdf">
+        <div class="col-md-8" style="height: 480px;">
+            <div class="row">
+                <div class="col-md-10 page-header">
+                    <span onclick="load()"><b>TRUYỆN MỚI CẬP NHẬT</b><span class="glyphicon glyphicon-menu-right"></span></span>
+                    <table id="demo"></table>
+                </div>
+                <div class="col-md-2 page-header">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false" style="color: black">Thể Loại <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Ngôn tình</a></li>
+                            <li><a href="#">Trinh Thám</a></li>
+                            <li><a href="#">Kiếm Hiệp</a></li>
+                            <li><a href="#">Xuyên Không</a></li>
+                            <li><a href="#">Viễn Tưởng</a></li>
+                            <li><a href="#">Truyện Ma</a></li>
+                            <li><a href="#">Trinh Thám</a></li>
+                            <li><a href="#">Truyện Cười</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row"
+                 style="height: 370px;background: url(img/wall-bookshelf.png);background-size: 100%;background-repeat: no-repeat;background-position: bottom left;">
+                <ul class="caption-style" id="truyen1" style="list-style-type: none;margin: 0px;padding-left: 20px;display: inline-block;">
+
+                </ul>
+                <!--<ul class="caption-style">
+                    <li data-toggle="modal" data-target="#myModal"><img src="img/Ba-Oi,-Minh-Di-Dau.png" class="img-thumbnail">
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <span>Ba ơi, Mình đi đâu</span>
+                                <p>Tác Giả: Trần A</p>
+                                <span class="glyphicon glyphicon-eye-open">12345</span>
+                                <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="caption-style">
+                    <li> <img src="img/Bach-Khoa-Yeu-Thuong.png" class="img-thumbnail" >
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <span>Bách Khoa Yêu Thương</span>
+                                <p>Tác Giả: Trần B</p>
+                                <span class="glyphicon glyphicon-eye-open">678</span>
+                                <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="caption-style">
+                    <li> <img src="img/Co-Hoi-Mot-Doi.png" class="img-thumbnail" >
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <<div class="caption-text">
+                            <span>Cơ Hội Một Đời</span>
+                            <p>Tác Giả: Trần C</p>
+                            <span class="glyphicon glyphicon-eye-open">1234</span>
+                            <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="caption-style">
+                    <li> <img src="img/Ke-trom-sach.png" class="img-thumbnail" >
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <span>Kẻ Trộm Sách</span>
+                                <p>Tác Giả: Trần D</p>
+                                <span class="glyphicon glyphicon-eye-open">348</span>
+                                <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>-->
+            </div>
+        </div>
+        <div class="col-md-4" style="height: 480px">
+            <div class="page-header">
+                <span><b>TOP THỂ LOẠI ƯA THÍCH</b><span class="glyphicon glyphicon-menu-right"></span></span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                    <p>Ngôn tình</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                    <p>Thám Hiểm</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                    <p>Lịch Sử</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                    <p>Xuyên Không</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="30"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                    <p>Viễn Tưởng</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+                     aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 55%">
+                    <p>Trinh Thám</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+                     aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                    <p>Tiểu Thuyết</p>
+                </div>
+            </div>
+        </div>
+        <button id="backtotop" class="btn btn-default"><span class="glyphicon glyphicon-triangle-top"></button>
+    </div>
+    <!--/main2-->
+    <!--main3-->
+    <div class="row"
+         style="height: 480px;background-color: white;border-left: 15px solid #dfdfdf;border-right: 15px solid #dfdfdf;border-bottom: 15px solid #dfdfdf">
+        <div class="col-md-8" style="height: 480px;">
+            <div class="row">
+                <div class="col-md-10 page-header">
+                    <span><b>TRUYỆN ĐỌC NHIỀU</b><span class="glyphicon glyphicon-menu-right"></span></span>
+                </div>
+                <div class="col-md-2 page-header">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false" style="color: black">Thể Loại <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Ngôn tình</a></li>
+                            <li><a href="#">Trinh Thám</a></li>
+                            <li><a href="#">Kiếm Hiệp</a></li>
+                            <li><a href="#">Xuyên Không</a></li>
+                            <li><a href="#">Viễn Tưởng</a></li>
+                            <li><a href="#">Truyện Ma</a></li>
+                            <li><a href="#">Trinh Thám</a></li>
+                            <li><a href="#">Truyện Cười</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row"
+                 style="height: 370px;background: url(img/wall-bookshelf.png);background-size: 100%;background-repeat: no-repeat;background-position: bottom left;">
+                <ul class="caption-style" id="truyen" style="list-style-type: none;margin: 0px;padding-left: 20px;display: inline-block;">
+
+                </ul>
+                <!--<ul class="caption-style">
+                    <li><img src="img/Nguoi-Dan-Ba-Hoang-Da.png" class="img-thumbnail" >
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <span>Người Đàn Bà Hoang Dã</span>
+                                <p>Tác Giả:Nguyễn A</p>
+                                <span class="glyphicon glyphicon-eye-open">2354</span>
+                                <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="caption-style">
+                    <li> <img src="img/Nhung-Bong-Hong-Trong-Thung.png" class="img-thumbnail" >
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <span>Những Bông Hồng Trong Thung Lũng</span>
+                                <p>Tác Giả:Nguyễn B</p>
+                                <span class="glyphicon glyphicon-eye-open">12345</span>
+                                <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="caption-style">
+                    <li> <img src="img/Co-Gai-Dua-Voi-Lua.png" class="img-thumbnail" >
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <span>Cô Gái Đùa Với Lửa</span>
+                                <p>Tác Giả:Nguyễn C</p>
+                                <span class="glyphicon glyphicon-eye-open">125</span>
+                                <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="caption-style">
+                    <li> <img src="img/Lam-Dau-Nha-Phu-Ong.png" class="img-thumbnail" >
+                        <div class="caption">
+                            <div class="blur"></div>
+                            <div class="caption-text">
+                                <span>Làm Dâu Nhà Phú Ông</span>
+                                <p>Tác Giả:Nguyễn D</p>
+                                <span class="glyphicon glyphicon-eye-open">7888</span>
+                                <p>Rate:<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>-->
+            </div>
+        </div>
+        <div class="col-md-4" style="height: 480px">
+            <div class="page-header" style="height: 30px">
+                <span><b>TRUYỆN CỦA BẠN</b><span class="glyphicon glyphicon-menu-right"></span></span>
+            </div>
+            <div class="panel panel-primary">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row toggle" class="active" id="dropdown1" data-toggle="detail-1">
+                            <div class="col-md-10" id="name1">
+                                <span class="glyphicon glyphicon-book"></span>Ba ơi, Mình đi đâu
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-heart"></span></div>
+                        </div>
+                    </li>
+                    <div class="row" id="div1">
+                        <div class="col-md-8">
+                            Bạn đã đọc hết truyện này
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">Mở truyện</a>
+                        </div>
+                    </div>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown2" data-toggle="detail-2">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-book"></span>Những Bông Hồng Trong Thung Lũng
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-heart"></span></div>
+                        </div>
+                    </li>
+                    <div class="row" id="div2">
+                        <div class="col-md-8">
+                            Bạn đã đọc được 8/17 tập
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">Mở truyện</a>
+                        </div>
+                    </div>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown3" data-toggle="detail-3">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-book"></span>Làm Dâu Nhà Phú Ông
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-heart"></span></div>
+                        </div>
+                    </li>
+                    <div class="row" id="div3">
+                        <div class="col-md-8">
+                            Bạn đã đọc được 1/10 tập
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">Mở truyện</a>
+                        </div>
+                    </div>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown4" data-toggle="detail-4">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-book"></span>Kẻ Trộm Sách
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-heart"></span></div>
+                        </div>
+                    </li>
+                    <div class="row" id="div4">
+                        <div class="col-md-8">
+                            Bạn đã đọc hết truyện này
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">Mở truyện</a>
+                        </div>
+                    </div>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown5" data-toggle="detail-5">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-book"></span>Nhấn Chuông Đi, Đừng Sợ
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-heart"></span></div>
+                        </div>
+                    </li>
+                    <div class="row" id="div5">
+                        <div class="col-md-8">
+                            Bạn đã đọc 19/20 tập
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">Mở truyện</a>
+                        </div>
+                    </div>
+                    <li class="list-group-item">
+                        <div class="row toggle" id="dropdown6" data-toggle="detail-6">
+                            <div class="col-md-10">
+                                <span class="glyphicon glyphicon-book"></span>Bách Khoa Yêu Thương
+                            </div>
+                            <div class="col-md-2"><span class="glyphicon glyphicon-heart"></span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button id="backtotop" class="btn btn-default"><span class="glyphicon glyphicon-triangle-top"></button>
+    </div>
+    <!--/main3-->
+    <!--footer-->
+    <footer class="bs-docs-footer" style="height: 100px;color: black;padding: 5px">
+        <div class="col-md-3">
+            <p>Copyright &copy:<a href="http://webtruyen.com/">http://webtruyen.com/</a>
+                <br>Liên kết với:
+                <br><a href="http://facebook.com"><img src="img/icon_fb.png" height="30" width="30"/></a> <a
+                        href="https://plus.google.com"><img
+                        src="img/icon_gg.png" height="30" width="30"/></a>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p>Kho tiểu thuyết với nhiều truyện tiên hiệp, truyện kiếm hiệp, truyện ngôn tình, truyện teen được chọn
+                lọc và đăng tải một cách kĩ lưỡng.</p>
+            <p>Mời bạn đọc và ủng hộ website bằng cách giới thiệu đến bạn bè, chúc bạn có những giây phút đọc truyện thư
+                giãn thật bổ ích.</p>
+        </div>
+        <div class="col-md-3">
+            <p>Liên hệ trực tiếp với chúng tôi:
+            <ul>
+                <li>SĐT: 0905671725</li>
+                <li>Email: quangviet287@gmail.com</li>
+            </ul>
+            </p>
+        </div>
+    </footer>
+    <!--/footer-->
+</div>
+<!--modal-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-open" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header" style="text-align: center">
+                NỘI DUNG TRUYỆN
+            </div>
+            <div class="modal-body">
+                <div align="center">
+                    <div id='book'>
+                        <img src="img/Truyen1.png"/>
+                        <img src="img/Truyen2.png"/>
+                        <img src="img/Truyện3.png"/>
+                        <img src="img/Truyện4.png"/>
+                        <img src="img/Truyện5.png"/>
+                        <img src="img/Truyện6.png"/>
+                        <img src="img/Truyện7.png"/>
+                        <img src="img/Truyện8.png"/>
+                        <img src="img/Truyện9.png"/>
+                        <img src="img/Truyện10.png"/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="callback">Thoát</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/modal-->
+<!--container-->
+</body>
+</html>
